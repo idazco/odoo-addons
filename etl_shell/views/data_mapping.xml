@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="data_mapping_tree" model="ir.ui.view">
+            <field name="name">odoo_etl_shell.data_mapping.tree</field>
+            <field name="model">odoo_etl_shell.data_mapping</field>
+            <field name="arch" type="xml">
+                <tree string="Data Mapping" editable="top">
+                    <field name="etl_context" domain="[('module_name', '=', context.get('default_module_name', 0))]" widget="selection"/>
+                    <field name="module_name" invisible="1"/>
+                    <field name="direction"/>
+                    <field name="from_value"/>
+                    <field name="to_value"/>
+                    <field name="custom_exp"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="data_mapping_search" model="ir.ui.view">
+            <field name="name">odoo_etl_shell.data_mapping.search</field>
+            <field name="model">odoo_etl_shell.data_mapping</field>
+            <field name="arch" type="xml">
+                <search string="Data Mapping">
+                    <field name="etl_context"/>
+                    <field name="direction"/>
+                    <field name="from_value"/>
+                    <field name="to_value"/>
+                    <group expand="0" string="Group By">
+                        <filter string="By Tag" context="{'group_by': 'etl_context'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="data_mapping_form" model="ir.ui.view">
+            <field name="name">odoo_etl_shell.data_mapping.tree</field>
+            <field name="model">odoo_etl_shell.data_mapping</field>
+            <field name="arch" type="xml">
+                <form string="Data Mapping">
+                    <group>
+                        <field name="etl_context" domain="[('module_name', '=', context.get('default_module_name', 0))]" widget="selection"/>
+                        <field name="module_name" invisible="1"/>
+                        <field name="direction"/>
+                        <field name="from_value"/>
+                        <field name="to_value"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

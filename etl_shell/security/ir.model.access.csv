@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_odoo_etl_shell_data_mapping,access_odoo_etl_shell_data_mapping,model_odoo_etl_shell_data_mapping,,1,0,0,0
+access_ir_cron_instance,access_ir_cron_instance,model_ir_cron_instance,,1,0,0,0
+access_etl_step,access_etl_step,model_etl_step,,1,0,0,0
+access_import_ledger,access_import_ledger,model_odoo_etl_shell_import_ledger,,1,0,0,0
+access_odoo_etl_shell_etl_context,access_odoo_etl_shell_etl_context,model_odoo_etl_shell_etl_context,base.group_user,1,0,0,0
+access_odoo_etl_shell_key_list,access_odoo_etl_shell_key_list,model_odoo_etl_shell_key_list,base.group_user,1,0,0,0

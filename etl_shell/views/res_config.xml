@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="config_view" model="ir.ui.view">
+            <field name="name">odoo_etl_shell.config.settings.form</field>
+            <field name="model">odoo_etl_shell.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configuration" class= "oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="odoo_etl_shell.res_config_action">
+            <field name="name">ETL Shell</field>
+            <field name="res_model">odoo_etl_shell.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="view_id" ref="odoo_etl_shell.config_view"/>
+        </record>
+
+        <menuitem name="ETL Shell" id="odoo_etl_shell.res_config_menu"
+                  parent="base.menu_automation"
+                  action="odoo_etl_shell.res_config_action"/>
+
+    </data>
+</odoo>
