@@ -24,5 +24,10 @@ class NotesTagged(models.Model):
     # fields
     note = fields.Char('Note', required=True)
     tag_id = fields.Many2one('notes.tag', string='Note Tag', required=True, ondelete='restrict', delegate=True)
+    # - support versioning
     original_note_id = fields.Many2one('notes.tagged', string='Replaces', ondelete='restrict')
+    # - soft deletable
     active = fields.Boolean('Active', default=True, required=True)
+    # - this is basically the same paradigm from Odoo's mail.message - used to link to other data
+    model = fields.Char('Related Document Model', index=True)
+    res_id = fields.Many2oneReference('Related Document ID', index=True, model_field='model')
