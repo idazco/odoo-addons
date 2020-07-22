@@ -2,7 +2,7 @@
     "name": "Tagged Notes",
     "version": "13.0.1.0.0",
     'description': "Tagged notes support",
-    "author": "shallow.droid",
+    "author": "IDAZCO",
     "license": "AGPL-3",
     "depends": ["base", "project"],
     "application": True,
