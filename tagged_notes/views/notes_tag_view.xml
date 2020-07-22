@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="notes_tags_list" model="ir.ui.view">
+        <field name="name">Note Tags List</field>
+        <field name="model">notes.tag</field>
+        <field name="arch" type="xml">
+            <tree create="true" delete="true" editable="top">
+                <field name="name"/>
+                <field name="internal"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_notes_tags" model="ir.actions.act_window">
+        <field name="name">Note Tags</field>
+        <field name="res_model">notes.tag</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+            name="Note Tags"
+            id="note_tags"
+            parent="project.menu_project_config"
+            action="action_notes_tags"
+            sequence="21"
+    />
+</odoo>

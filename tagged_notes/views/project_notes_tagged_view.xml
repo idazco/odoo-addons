@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tree View Project Notes -->
+    <record id="project_notes_tree" model="ir.ui.view">
+        <field name="name">project.notes.tagged.tree</field>
+        <field name="model">notes.tagged</field>
+        <field name="arch" type="xml">
+            <tree string="Notes" editable="top">
+                <field name="tag_id"/>
+                <field name="note"/>
+                <field name="create_date"/>
+                <field name="create_uid"/>
+                <field name="original_note_id" invisible="1"/>
+                <field name="active" invisible="1"/>
+                <field name="model" invisible="1"/>
+                <field name="res_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="project_edit_project_view_form_inherit_project_notes" model="ir.ui.view">
+        <field name="name">project.form.inherit.project.notes</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                        class="oe_stat_button"
+                        type="object"
+                        string="Notes"
+                        name="action_open_notes_tagged"
+                        icon="fa-pencil-square-o">
+                </button>
+            </div>
+        </field>
+    </record>
+
+</odoo>
