@@ -1,9 +1,14 @@
 {
     "name": "Tagged Notes",
-    "version": "13.0.1.0.0",
-    "category": "Project Management",
+    "version": "10.0.1.0.0",
+    'description': "Tagged notes support",
     "author": "IDAZCO",
     "license": "AGPL-3",
-    "depends": ["project"],
+    "depends": ["base", "project"],
+    "application": True,
     "installable": True,
+    "data": [
+        "views/notes_tags_view.xml",
+        'security/ir.model.access.csv',
+    ]
 }
