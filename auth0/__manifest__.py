@@ -2,7 +2,7 @@
 {
     'name': 'Auth0',
     'version': '13.0.1',
-    'author': 'Odoo Community',
+    'author': 'IDAZCO',
     'summary': 'Auth0 module for Odoo',
     'website': 'https://github.com/idazco/odoo_auth0',
     'description': 'Enables OAuth authentication through Auth0',
